@@ -1,24 +1,14 @@
+import GalleryListItem from "./GalleryListItem";
 import style from "../scss/Gallery/Gallery.module.scss";
-import React from "react";
-import GalleryListText from "./GalleryListText";
 
 function GalleryList({ gallery }) {
   return (
     <div className={style.GalleryList}>
-      {gallery.map((item) => (
-        <div className={style.Galleryitem} key={item.id}>
-          <div className={style.img}>
-            <img src={item.url} />
-          </div>
-          <div className={style.text}>
-            <h2>{item.title}</h2>
-            <ul>
-                      <GalleryListText item={item.skills}/>  
-            </ul>
-          </div>
-        </div>
+      {gallery.map((item, index) => (
+        <GalleryListItem key={item.id} item={item} isLeft={index % 2 === 0} />
       ))}
     </div>
   );
 }
+
 export default GalleryList;

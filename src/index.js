@@ -1,18 +1,11 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Hero from "./Hero/Hero";
-import Gallery from "./Gallery/Gallery";
-import Footer from "./Footer/Footer";
+import Main from "./Main";
+import { ThemeProvider } from "./ThemeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <div className="main">
-      <Hero />
-      <Gallery />
-      <Footer />
-    </div>
-  </React.StrictMode>
+  <ThemeProvider>
+    <Main />
+  </ThemeProvider>
 );
-
