@@ -3,10 +3,8 @@ import { useScrollTrigger } from "../hooks/useScrollTrigger"; //トリガーフ�
 import VisualHeading from "./Visual/VisualHeading";
 import bottomarrow from "../assets/bottom-arrow.png";
 import topImg from "../assets/top.jpg"
-import { useTheme } from "../ThemeContext"; // ← 必要なら相対パス調整
 
 function Visual({ hero }) {
-  const { mode } = useTheme();
   const [ref, isVisible] = useScrollTrigger({
     threshold: 1.0,
     rootMargin: "0px 0px -500px 0px",
@@ -20,7 +18,7 @@ function Visual({ hero }) {
           <img src={topImg} alt="main-visual" />
         </div>
       </div>
-      <h1 className={style[mode]}>
+      <h1>
         <VisualHeading text={hero.catch} />
       </h1>
 

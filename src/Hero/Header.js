@@ -19,8 +19,8 @@ function Header() {
         className={`${style.hum} ${open ? style.open : ""}`}
         onClick={() => setOpen(!open)}
       >
-        <span className={`${style.line} ${style[mode]}`}></span>
-        <span className={`${style.line} ${style[mode]}`}></span>
+        <span className={style.line}></span>
+        <span className={style.line}></span>
       </div>
 
       <Nav open={open} />
