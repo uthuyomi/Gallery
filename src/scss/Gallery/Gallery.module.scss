@@ -3,8 +3,8 @@
   .GalleryList {
     width: 100%;
     padding: 1px;
-    @media (max-width: 1199px) {
-      padding-top: 150px;
+    @media(min-width: 500px) and (max-width: 768px){
+      padding: 30vw 0;
     }
     :global(.light) & {
       background-color: #d9d9d9;
@@ -22,9 +22,9 @@
       @media (max-width: 1199px) {
         //SPの場合は画面幅と要素幅を合わせる
         max-width: 600px;
-        height: 110vw;
+        aspect-ratio: 3/4;
         width: calc(100% - 40px);
-        margin: 0 auto;
+        margin: 40px auto 40px;
       }
       :global(.swiper) {
         position: absolute;
@@ -180,11 +180,11 @@
       margin: 80px auto;
       @media (max-width: 1199px) {
         max-width: 600px;
-        height: 110vw;
+        aspect-ratio: 3/4;
         width: calc(100% - 40px);
-        margin: 0 auto;
+        margin: 40px auto 40px;
       }
-      transition: all .5s;
+      transition: all 0.5s;
       :global(.swiper) {
         position: absolute;
         top: 25px;
@@ -194,7 +194,7 @@
         width: 100%;
         aspect-ratio: 3/2;
         transition: all 1s;
-         @media (max-width: 1199px) {
+        @media (max-width: 1199px) {
           top: 25%;
           left: 0;
         }
