@@ -97,36 +97,43 @@
         }
       }
       .text {
-        position: absolute;
+         position: absolute;
         top: 25px;
         left: 100px;
-        @media(max-width: 1199px){
+         @media(max-width: 1199px){
           left: 0;
         }
         background-color: #f4f4f4;
         max-width: 600px;
         width: 100%;
         aspect-ratio: 3/2;
+        @media(max-width: 1199px){
+          padding-left: 20px;
+        }
         z-index: -1;
         transition: all 1s;
+        box-sizing: border-box;
         h2 {
           width: 200px;
           margin-left: 400px;
-          @media( max-width: 1199px ){
-            margin-left: 63px;
-          }
           text-align: center;
+          @media( max-width: 1199px){
+            font-size: 1em;
+            margin: 30px 0 0 30px;
+          }
+          @media( max-width: 768px){
+            margin: 20px 0 0 20px;
+          }
         }
         ul {
           width: 200px;
           margin-left: 460px;
-          @media( max-width: 1199px ){
-            margin-left: 30px;
-          }
           padding-left: 0;
           text-align: left;
           list-style: none;
-          li {
+          @media( max-width: 1199px){
+            margin-left: 30px;
+            font-size: 0.8em;
           }
         }
       }
@@ -152,10 +159,10 @@
       @media (max-width: 1199px){
         &.slideYMobile {
           .img {
-            transform: translateY(-100px); // 右 + 縦
+            transform: translateY(-50%); // 縦
           }
           .text {
-            transform: translateY(100px); // 左 + 縦
+            transform: translateY(50%); // 縦
           }
         }
       }
@@ -261,28 +268,30 @@
         }
         z-index: -1;
         transition: all 1s;
+        box-sizing: border-box;
         h2 {
           width: 200px;
           margin-right: 400px; // ← margin-left → margin-right
-          @media( max-width: 1199px){
-            margin: 120px 0 0 30px;
-          }
-          margin-left: auto;
           text-align: center;
+          @media( max-width: 1199px){
+            margin: 30px 0 0 30px;
+            font-size: 1em;
+          }
+          @media( max-width: 768px){
+            margin: 20px 0 0 20px;
+          }
+          
         }
 
         ul {
           width: 200px;
           margin-left: 60px; // ← 同上
-          @media( max-width: 1199px){
-            margin-left: 30px;
-          }
           padding-left: 0;
           text-align: left;
           list-style: none;
-
-          li {
-            // ...
+          @media( max-width: 1199px){
+            margin-left: 30px;
+            font-size: 0.8em;
           }
         }
       }
@@ -308,10 +317,10 @@
       @media (max-width: 1199px){
         &.slideYMobile {
           .img {
-            transform: translateY(-150px); // 右 + 縦
+            transform: translateY(-50%); // 右 + 縦
           }
           .text {
-            transform: translateY(150px); // 左 + 縦
+            transform: translateY(50%); // 左 + 縦
           }
         }
       }
