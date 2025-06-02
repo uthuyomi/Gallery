@@ -3,6 +3,12 @@
   width: 100%;
   margin: 0 auto;
   padding: 1px;
+  @media (max-width: 1199px) and (min-width: 600px) {
+    width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1px;
+  }
   header {
     width: 100%;
     height: 150px;
@@ -11,7 +17,7 @@
     }
     .hum {
       position: fixed;
-      right: calc(50% - 600px);
+      right: calc(50% - 550px);
       top: 55px;
       width: 40px;
       height: 40px;
@@ -70,7 +76,6 @@
             position: relative;
             display: block;
             text-decoration: none;
-            color: black;
             font-size: 20px;
             &::after {
               content: "";
@@ -79,14 +84,25 @@
               left: 0;
               width: 100%;
               height: 2px;
-              background: #333;
               transform-origin: right; // 右側を起点に縮む！
               transform: scaleX(1); // 初期状態：100%
               transition: transform 0.3s ease;
+              :global(.light) & {
+                background-color: black;
+              }
+              :global(.dark) & {
+                background-color: #fff;
+              }
             }
 
             &:hover::after {
               transform: scaleX(0); // → 幅0（消える）
+            }
+            :global(.light) & {
+              color: black;
+            }
+            :global(.dark) & {
+              color: #fff;
             }
           }
         }
@@ -105,6 +121,18 @@
         background-color: gray;
         margin-left: 30%;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25% 0);
+        @media (max-width: 1199px) {
+          position: relative;
+          top: 0;
+          left: 50%;
+          right: 0;
+          width: 100%;
+          aspect-ratio: 16/9;
+          background-color: gray;
+          margin-left: 0;
+          clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+          transform: translateX(-50%);
+        }
         img {
           position: absolute;
           top: 50%;
@@ -118,12 +146,17 @@
     h1 {
       position: absolute;
       top: 5%;
-      left: 20%;
-      font-size: 5em;
+      left: 30%;
+      font-size: 4em;
       font-weight: bold;
       transform: translateX(-50%);
       white-space: nowrap;
       transition: all 0.3s ease;
+      @media (max-width: 1199px) {
+        top: 47vw;
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
       :global(.light) & {
         color: #000;
@@ -142,21 +175,33 @@
       display: block;
       width: 300px;
       height: 120px;
-      
       font-size: 2em;
       line-height: 80px;
       text-align: center;
       margin: 150px auto 100px;
-
-      :global(.light) &{
+      @media (max-width: 1199px){
+         width: 300px;
+      height: 120px;
+      font-size: 2em;
+      line-height: 80px;
+      text-align: center;
+      margin: 300px auto 100px;
+      }
+      :global(.light) & {
         border: solid 1px black;
       }
-      :global(.dark) &{
+      :global(.dark) & {
         border: solid 1px #fff;
       }
       a {
         color: black;
         text-decoration: none;
+        :global(.light) & {
+          color: black;
+        }
+        :global(.dark) & {
+          color: #fff;
+        }
       }
       span {
         position: absolute;

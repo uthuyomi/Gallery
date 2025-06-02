@@ -12,6 +12,16 @@ function GalleryListItem({ item, isLeft }) {
   });
 
   const [slideY, setSlideY] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkSize = () => {
+      setIsMobile(window.innerWidth <= 1199);
+    };
+    checkSize();
+    window.addEventListener("resize", checkSize);
+    return () => window.removeEventListener("resize", checkSize);
+  }, []);
 
   useEffect(() => {
     if (inView) {
@@ -23,11 +33,11 @@ function GalleryListItem({ item, isLeft }) {
   }, [inView]);
 
   const wrapperClass = isLeft
-    ? `${style.GalleryLeftitem} ${inView ? style.slideX : ""} ${
-        slideY ? style.slideY : ""
+    ? `${style.GalleryLeftitem} ${!isMobile && inView ? style.slideX : ""} ${
+        slideY ? (isMobile ? style.slideYMobile : style.slideY) : ""
       }`
-    : `${style.GalleryRightitem} ${inView ? style.slideX : ""} ${
-        slideY ? style.slideY : ""
+    : `${style.GalleryRightitem} ${!isMobile && inView ? style.slideX : ""} ${
+        slideY ? (isMobile ? style.slideYMobile : style.slideY) : ""
       }`;
 
   return (
