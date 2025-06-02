@@ -4,7 +4,7 @@
     width: 100%;
     padding: 1px;
     @media (max-width: 1199px) {
-      padding-top: 100px;
+      padding-top: 150px;
     }
     :global(.light) & {
       background-color: #d9d9d9;
@@ -15,27 +15,30 @@
     .GalleryLeftitem {
       position: relative;
       max-width: 800px;
-      @media (max-width: 1199px) {
-        //SPの場合は画面幅と要素幅を合わせる
-        max-width: 600px;
-        width: calc(100% - 40px);
-      }
       height: 600px;
       z-index: 10;
       margin: 80px auto;
       transition: all 0.5s;
+      @media (max-width: 1199px) {
+        //SPの場合は画面幅と要素幅を合わせる
+        max-width: 600px;
+        height: 110vw;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+      }
       :global(.swiper) {
         position: absolute;
         top: 25px;
         left: 100px;
-        @media (max-width: 1199px) {
-          left: 0;
-        }
         background-color: gray;
         max-width: 600px;
         width: 100%;
         aspect-ratio: 3/2;
         transition: all 1s;
+        @media (max-width: 1199px) {
+          top: 25%;
+          left: 0;
+        }
         :global(.swiper-wrapper) {
           :global(.swiper-slide) {
           }
@@ -102,6 +105,7 @@
         top: 25px;
         left: 100px;
         @media (max-width: 1199px) {
+          top: 25%;
           left: 0;
         }
         background-color: #f4f4f4;
@@ -171,27 +175,29 @@
     .GalleryRightitem {
       position: relative;
       width: 800px;
-      @media (max-width: 1199px) {
-        //SPの場合は画面幅と要素幅を合わせる
-        max-width: 600px;
-        width: calc(100% - 40px);
-      }
       height: 600px;
       z-index: 10;
       margin: 80px auto;
-
+      @media (max-width: 1199px) {
+        max-width: 600px;
+        height: 110vw;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+      }
+      transition: all .5s;
       :global(.swiper) {
         position: absolute;
         top: 25px;
         left: 100px;
-        @media (max-width: 1199px) {
-          left: 0;
-        }
         background-color: gray;
         max-width: 600px;
         width: 100%;
         aspect-ratio: 3/2;
         transition: all 1s;
+         @media (max-width: 1199px) {
+          top: 25%;
+          left: 0;
+        }
         :global(.swiper-wrapper) {
           :global(.swiper-slide) {
           }
@@ -258,19 +264,18 @@
         position: absolute;
         top: 25px;
         left: 100px;
-        @media (max-width: 1199px) {
-          left: 0;
-        }
         background-color: #f4f4f4;
         max-width: 600px;
         width: 100%;
         aspect-ratio: 3/2;
-        @media (max-width: 1199px) {
-          padding-left: 20px;
-        }
         z-index: -1;
         transition: all 1s;
         box-sizing: border-box;
+        @media (max-width: 1199px) {
+          top: 25%;
+          left: 0;
+          padding-left: 20px;
+        }
         h2 {
           width: 200px;
           margin-right: 400px; // ← margin-left → margin-right
@@ -299,10 +304,10 @@
       @media (min-width: 1200px) {
         &.slideX {
           .img {
-            transform: translateX(150px); // 右方向へ
+            transform: translateX(100px); // 右方向へ
           }
           .text {
-            transform: translateX(-150px); // 左方向へ
+            transform: translateX(-100px); // 左方向へ
           }
         }
 
