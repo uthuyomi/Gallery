@@ -18,6 +18,18 @@
     .logo {
       display: none;
     }
+    .themeButton{
+      position: fixed;
+      top: 55px;
+      left: 70vw;
+      @media( max-width: 1199px){
+        left: 60vw;
+      }
+      @media( max-width: 768px){
+        left: 50vw;
+        top: 10px;
+      }
+    }
     .hum {
       position: fixed;
       left: 80vw;
