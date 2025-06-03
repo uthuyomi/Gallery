@@ -22,8 +22,6 @@ function Header() {
         className={style.themeButton}
         style={{
           background: `url(${icon}) no-repeat center/contain`,
-          width: "120px",
-          height: "48px",
           border: "none",
           cursor: "pointer",
           backgroundColor: "transparent",

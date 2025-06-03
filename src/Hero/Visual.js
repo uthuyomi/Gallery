@@ -25,7 +25,6 @@ function Visual({ hero }) {
       <div className={style.bottomarrow}>
         <a href="">Lean more</a>
         <span ref={ref} className={isVisible ? style.active : ""}>
-          <img src={bottomarrow} alt="下向き矢印" />
         </span>
       </div>
     </div>

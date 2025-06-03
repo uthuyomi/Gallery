@@ -12,22 +12,28 @@
   header {
     width: 100%;
     height: 150px;
-    @media( max-width: 768px){
+    @media (max-width: 768px) {
       height: 60px;
     }
     .logo {
       display: none;
     }
-    .themeButton{
+    .themeButton {
       position: fixed;
+      display: block;
+      width: "120px";
+      height: "48px";
       top: 55px;
       left: 70vw;
-      @media( max-width: 1199px){
-        left: 60vw;
+      z-index: 100;
+      @media (max-width: 1199px) {
+        left: 75vw;
       }
-      @media( max-width: 768px){
+      @media (max-width: 768px) {
         left: 50vw;
         top: 10px;
+        width: 85px;
+        height: auto;
       }
     }
     .hum {
@@ -40,10 +46,10 @@
       border: none;
       cursor: pointer;
       z-index: 100;
-      @media( max-width: 1199px){
+      @media (max-width: 1199px) {
         left: 90vw;
       }
-      @media( max-width: 768px){
+      @media (max-width: 768px) {
         left: 85vw;
         top: 10px;
       }
@@ -179,7 +185,7 @@
         left: 50%;
         transform: translateX(-50%);
       }
-      @media (max-width: 768px){
+      @media (max-width: 768px) {
         top: 55vw;
         font-size: 3em;
       }
@@ -205,13 +211,13 @@
       line-height: 80px;
       text-align: center;
       margin: 150px auto 100px;
-      @media (max-width: 1199px){
-      width: 300px;
-      height: 120px;
-      font-size: 2em;
-      line-height: 80px;
-      text-align: center;
-      margin: 250px auto 100px;
+      @media (max-width: 1199px) {
+        width: 300px;
+        height: 120px;
+        font-size: 2em;
+        line-height: 80px;
+        text-align: center;
+        margin: 250px auto 100px;
       }
       :global(.light) & {
         border: solid 1px black;
@@ -246,18 +252,37 @@
           background: #4b4b4b;
           transition: 1s ease;
           transform: translateX(-50%);
+          :global(.light) & {
+            background-color: #000;
+          }
+          :global(.dark) & {
+            background-color: #fff;
+          }
         }
         &.active {
-          top: 170px;
+          top: 240px;
         }
         &.active::before {
-          height: 100px;
+          height: 170px;
         }
-        img {
-          display: block;
-          width: 30px;
-          height: auto;
-          margin-top: -20px;
+        &::after {
+          position: absolute;
+          content: "";
+          top: 100%;
+          width: 0;
+          left: 50%;
+          height: 0;
+          border-style: solid;
+          border-right: 20px solid transparent;
+          border-left: 20px solid transparent;
+          border-bottom: 0;
+          transform: translateX(-50%);
+          :global(.light) & {
+            border-top: 30px solid #000;
+          }
+          :global(.dark) & {
+            border-top: 30px solid #fff;
+          }
         }
       }
     }
