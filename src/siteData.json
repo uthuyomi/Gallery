@@ -14,24 +14,24 @@
       "id": 1,
       "imagepc": "inner-img01-pc.jpg",
       "imagesp": "inner-img01-sp.jpg",
-      "title": "Project 1",
-      "skills": ["HTML", "CSS", "JavaScript", "Photoshop", "Sketch"],
+      "title": "画像LP案件",
+      "skills": ["HTML", "CSS", "JavaScript", "figma"],
       "link": "https://webyayasu.sakura.ne.jp/bousai-LP/index.html"
     },
     {
       "id": 2,
       "imagepc": "inner-img02-pc.png",
       "imagesp": "inner-img02-sp.png",
-      "title": "Project 2",
-      "skills": ["HTML", "CSS", "JavaScript", "Photoshop", "Illustrator"],
+      "title": "通常LP案件",
+      "skills": ["HTML", "CSS", "JavaScript", "slick.js", "Photoshop"],
       "link": "https://webyayasu.sakura.ne.jp/portfolio/porenai-LP/porenai03/index.html"
     },
     {
       "id": 3,
       "imagepc": "inner-img03-pc.png",
       "imagesp": "inner-img03-sp.png",
-      "title": "Project 3",
-      "skills": ["HTML", "CSS", "JavaScript", "Sketch"],
+      "title": "WPテーマ制作",
+      "skills": ["HTML", "CSS", "JavaScript", "php", "CFS", "figma"],
       "link": "https://webyayasu.sakura.ne.jp/home/"
     },
     {
@@ -39,7 +39,7 @@
       "imagepc": "inner-img04-pc.jpg",
       "imagesp": "inner-img04-sp.jpg",
       "title": "Project 3",
-      "skills": ["HTML", "CSS", "JavaScript", "Sketch"],
+      "skills": ["HTML", "CSS", "Photoshop"],
       "link": "https://webyayasu.sakura.ne.jp/portfolio/kanri-LP/index.html"
     },
     {
@@ -47,7 +47,7 @@
       "imagepc": "inner-img05-pc.jpg",
       "imagesp": "inner-img05-sp.jpg",
       "title": "Project 3",
-      "skills": ["HTML", "CSS", "JavaScript", "Sketch"],
+      "skills": ["HTML", "CSS", "JavaScript", "Photoshop"],
       "link": "/https://webyayasu.sakura.ne.jp/portfolio/1R/index.html"
     },
     {
@@ -55,7 +55,7 @@
       "imagepc": "inner-img06-pcsp.png",
       "imagesp": "inner-img06-pcsp.png",
       "title": "Project 3",
-      "skills": ["HTML", "CSS", "JavaScript", "Sketch"],
+      "skills": ["HTML", "CSS", "Photoshop"],
       "link": "/https://webyayasu.sakura.ne.jp/portfolio/1R/index.html"
     }
   ]
