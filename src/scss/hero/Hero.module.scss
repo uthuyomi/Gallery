@@ -21,8 +21,8 @@
     .themeButton {
       position: fixed;
       display: block;
-      width: "120px";
-      height: "48px";
+      width: 120px;
+      aspect-ratio: 120 / 48;
       top: 55px;
       left: 70vw;
       z-index: 100;
@@ -30,10 +30,9 @@
         left: 75vw;
       }
       @media (max-width: 768px) {
-        left: 50vw;
-        top: 10px;
+        left: 5vw;
+        top: 15px;
         width: 85px;
-        height: auto;
       }
     }
     .hum {
@@ -87,15 +86,26 @@
     }
     nav {
       position: fixed;
-      width: 300px;
-      transform: translateX(-250%);
+      left: 0;
+      top: 0;
+      width: 200px;
+      height: 100vh;
+      padding: 50px;
+      transform: translateX(-300px);
+      background-color: #fff;
       transition: all 0.5s;
-      z-index: 100;
+      z-index: 50;
+      box-sizing: border-box;
+      @media(max-width: 768px){
+        width: 100%;
+        transform: translateX(-100%);
+      }
       &.navOpen {
         transform: translateX(0) !important;
       }
       ul {
         list-style: none;
+        padding-left: 0;
         li {
           padding: 15px 0;
           transition: all 0.3s;
