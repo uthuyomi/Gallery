@@ -122,15 +122,10 @@
               left: 0;
               width: 100%;
               height: 2px;
+              background-color: black;
               transform-origin: right; // 右側を起点に縮む！
               transform: scaleX(1); // 初期状態：100%
               transition: transform 0.3s ease;
-              :global(.light) & {
-                background-color: black;
-              }
-              :global(.dark) & {
-                background-color: #fff;
-              }
             }
 
             &:hover::after {

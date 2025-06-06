@@ -1,8 +1,8 @@
 {
   "nav": [
-    { "id": 1, "label": "Home", "url": "/" },
-    { "id": 2, "label": "Works", "url": "/works" },
-    { "id": 3, "label": "Contact", "url": "/contact" }
+    { "id": 1, "label": "Home", "url": "/index.html" },
+    { "id": 2, "label": "Works", "url": "https://webyayasu.com/" },
+    { "id": 3, "label": "Contact", "url": "https://webyayasu.com/#contact" }
   ],
   "hero": {
     "catch": "Designed {{br}} to Function.",
@@ -16,7 +16,7 @@
       "imagesp": "inner-img01-sp.jpg",
       "title": "画像LP案件",
       "skills": ["HTML", "CSS", "JavaScript", "figma"],
-      "link": "https://webyayasu.sakura.ne.jp/bousai-LP/index.html"
+      "link": "https://webyayasu.sakura.ne.jp/portfolio/porenai-LP/porenai03/index.html"
     },
     {
       "id": 2,
@@ -24,7 +24,7 @@
       "imagesp": "inner-img02-sp.png",
       "title": "通常LP案件",
       "skills": ["HTML", "CSS", "JavaScript", "slick.js", "Photoshop"],
-      "link": "https://webyayasu.sakura.ne.jp/portfolio/porenai-LP/porenai03/index.html"
+      "link": "https://webyayasu.sakura.ne.jp/bousai-LP/index.html"
     },
     {
       "id": 3,
@@ -38,25 +38,25 @@
       "id": 4,
       "imagepc": "inner-img04-pc.jpg",
       "imagesp": "inner-img04-sp.jpg",
-      "title": "Project 3",
+      "title": "セミナーLP",
       "skills": ["HTML", "CSS", "Photoshop"],
       "link": "https://webyayasu.sakura.ne.jp/portfolio/kanri-LP/index.html"
     },
     {
       "id": 5,
-      "imagepc": "inner-img05-pc.jpg",
+      "imagepc": "inner-img05-pc.png",
       "imagesp": "inner-img05-sp.jpg",
-      "title": "Project 3",
+      "title": "住宅系LP",
       "skills": ["HTML", "CSS", "JavaScript", "Photoshop"],
-      "link": "/https://webyayasu.sakura.ne.jp/portfolio/1R/index.html"
+      "link": "https://webyayasu.sakura.ne.jp/portfolio/1R/index.html"
     },
     {
       "id": 6,
       "imagepc": "inner-img06-pcsp.png",
       "imagesp": "inner-img06-pcsp.png",
-      "title": "Project 3",
+      "title": "住宅系LP",
       "skills": ["HTML", "CSS", "Photoshop"],
-      "link": "/https://webyayasu.sakura.ne.jp/portfolio/1R/index.html"
+      "link": "https://webyayasu.sakura.ne.jp/portfolio/zyuutaku-LP/LP-left/html/LP1.html"
     }
   ]
 }
